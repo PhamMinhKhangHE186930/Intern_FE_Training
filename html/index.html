@@ -1,23 +1,96 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="vi">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>123</title>
+    <title>Ví dụ tổng hợp HTML</title>
+    <!-- <style>
+        body {
+            font-family: sans-serif;
+            line-height: 1.6;
+            padding: 20px;
+            max-width: 800px;
+            margin: auto;
+        }
+
+        section {
+            border-bottom: 1px solid #ccc;
+            padding: 20px 0;
+        }
+
+        code {
+            background: #eee;
+            padding: 2px 5px;
+        }
+    </style> -->
 </head>
+
 <body>
-    <header>
-        <h1 id="head1">OKOKOKO</h1>
-    </header>
-    <p>testing conflict </p>
-    <p>testing conflict </p>
-    <p>testing conflict </p>
-    <p>testing conflict </p>
-    <p>testing conflict </p>
-    <p>testing conflict </p>
-    <p>testing conflict </p>
-    <p>testing conflict </p>
+
+    <section>
+        <h1>Tiêu đề cấp 1 (H1)</h1>
+        <h2>Tiêu đề cấp 2 (H2)</h2>
+        <h3>Tiêu đề cấp 3 (H3)</h3>
+        <h4>Tiêu đề cấp 4 (H4)</h4>
+        <h5>Tiêu đề cấp 5 (H5)</h5>
+        <h6>Tiêu đề cấp 6 (H6)</h6>
+    </section>
+
+    <section>
+        <h2>Định dạng văn bản</h2>
+        <p>Đây là một <strong>đoạn văn bản (p)</strong> bình thường.</p>
+        <p>Chúng ta có thể nhấn mạnh bằng <strong>thẻ strong (quan trọng)</strong> hoặc <b>thẻ b (in đậm)</b>.</p>
+        <p>Cũng có thể dùng <em>thẻ em (nhấn mạnh ngữ điệu)</em> hoặc <i>thẻ i (in nghiêng)</i>.</p>
+        <p>Đánh dấu nội dung bằng <mark>thẻ mark</mark>, hoặc <small>văn bản nhỏ (small)</small>.</p>
+        <p>Gạch chân bằng <u>thẻ u</u>, gạch ngang do sai sót bằng <s>thẻ s</s>.</p>
+        <p>Chỉnh sửa văn bản: <del>Nội dung bị xóa</del> và <ins>Nội dung được thêm mới</ins>.</p>
+        <p>Toán học và Hóa học: 2<sup>10</sup> = 1024; H<sub>2</sub>O là nước.</p>
+    </section>
+
+    <section>
+        <h2>Trích dẫn và Code</h2>
+        <p>Một câu trích dẫn ngắn: <q>Học đi đôi với hành.</q></p>
+        <blockquote>
+            Đây là một đoạn trích dẫn dài (blockquote). Nó thường được thụt lề so với văn bản xung quanh để dễ nhận
+            biết.
+        </blockquote>
+        <p>Để hiển thị mã code: <code>console.log("Hello World");</code></p>
+        <pre>
+Đây là thẻ pre.
+Nó giữ nguyên khoảng trắng
+    và các dấu xuống dòng.
+        </pre>
+    </section>
+
+    <section>
+        <h2>Thẻ liên kết (Links)</h2>
+        <ul>
+            <li>Liên kết ngoài: <a href="https://www.google.com" target="_blank">Mở Google trong tab mới</a></li>
+            <li>Liên kết Email: <a href="mailto:support@example.com">Gửi email cho hỗ trợ</a></li>
+            <li>Liên kết Điện thoại: <a href="tel:0123456789">Gọi 0123456789</a></li>
+        </ul>
+    </section>
+
+    <section>
+        <h2>Thẻ hình ảnh (Images)</h2>
+        <p>Ảnh bình thường có văn bản thay thế (alt):</p>
+        <img src="https://via.placeholder.com/300x150" alt="Ảnh ví dụ minh họa" width="300">
+
+        <p>Ảnh kết hợp liên kết (Bấm vào ảnh để chuyển trang):</p>
+        <a href="https://html.spec.whatwg.org/" target="_blank">
+            <img src="https://via.placeholder.com/100" alt="Logo HTML5" title="Click để xem tài liệu HTML">
+        </a>
+    </section>
+
+    <footer>
+        <address>
+            Viết bởi: <a href="#">Author</a><br>
+            Địa chỉ: Thế giới Internet<br>
+            Ngày: <time datetime="2024-05-20">20 tháng 5, 2024</time>
+        </address>
+    </footer>
+
 </body>
 
-<script src="../js/code.js"></script>
 </html>
