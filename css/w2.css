@@ -6,32 +6,29 @@
 
 body {
     display: grid;
-    grid-template-columns: repeat(12, 1fr);
-
+    grid-template-columns: 250px 1fr;
+    transition: grid-template-columns 0.3s ease;
 }
 
 #navbar {
     background-color: rgb(0, 0, 255);
     height: 100vh;
-    grid-column: 1/span 2;
-}
-
-section {
-    grid-column: 3/span 10;
+    overflow: hidden;
 }
 
 #navbar__list {
     list-style: none;
     display: flex;
     flex-direction: column;
-    padding: 0;
 }
 
 #navbar__list li a {
     text-decoration: none;
     color: aliceblue;
-    display: block;
-    padding: 10px 50px;
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    padding: 15px 20px;
 }
 
 #navbar__list li a:hover {
@@ -43,12 +40,6 @@ section {
     justify-content: end;
 }
 
-#navbar__btn--colapse {
-    background-color: rgb(0, 0, 255);
-    padding: 10px;
-    border: 0;
-}
-
 i {
     color: aliceblue;
 }
@@ -57,9 +48,35 @@ i {
     visibility: hidden;
 }
 
-.collapse {
-    width: 10vh;
+#navbar__btn--colapse {
+    background-color: transparent;
+    padding: 10px;
+    border: 0;
+    margin-right: 20px;
+    transition: transform 0.3s ease;
+}
+
+#navbar__btn--colapse:hover {
+    cursor: pointer;
+}
+
+/* trạng thái collapse */
+
+body.collapsed {
+    grid-template-columns: 60px 1fr;
+}
+
+body.collapsed #navbar {
     justify-items: center;
+}
+
+body.collapsed #navbar__btn--colapse {
+    margin-right: 0px;
+    transform: rotate(180deg);
+}
+
+body.collapsed #navbar__list li a span {
+    display: none;
 }
 
 @media screen and (max-width: 768px) {
