@@ -13,11 +13,22 @@ toggleBtnPhone.addEventListener('click', () => {
 
 // const API_KEY = "pub_457939f90d1519954cb53bc76109dd8cdf931f13be2a14da6ed9366215a8e6f6"
 const API_KEY = "reqres_283aa35cab24417780c1da81549bfdad"
-const apiUrl = "https://reqres.in/api/users?page=1";
+let apiUrl = "https://reqres.in/api/users?page=1";
 
 let userData = []
 let page = 1;
 let total_pages = 1;
+
+document.getElementById("paging").addEventListener('click', (event) => {
+    if (event.target.classList.contains('page-item')) {
+        const selectedPage = parseInt(event.target.getAttribute('data-page'));
+        if(selectedPage === page) return;
+        
+        apiUrl = `https://reqres.in/api/users?page=${selectedPage}`;
+        fetchUsers();
+    }
+});
+
 
 const fetchUsers = async () => {
     try {
@@ -38,16 +49,16 @@ const fetchUsers = async () => {
         total_pages = data.total_pages;
 
         generateData();
+        generatePagination();
     } catch (error) {
         console.log("Fetch error", error.message)
     }
 }
 
-fetchUsers();
-
 const generateData = () => {
     const cardList = document.getElementById("card_list");
     cardList.innerHTML = '';
+    let htmlContent = '';
     if (userData.length > 0) {
         userData.forEach(user => {
             const userCard =
@@ -62,7 +73,20 @@ const generateData = () => {
                 </div>
             </div>`;
 
-            cardList.innerHTML = cardList.innerHTML + userCard;
+            htmlContent += userCard;
         });
     }
+    cardList.innerHTML = htmlContent;
 }
+
+const generatePagination = () => {
+    const pagination = document.getElementById("paging");
+    let htmlContent = '';
+    for (let i = 1; i <= total_pages; i++) {
+        const pageItem = `<li class="page-item ${i === page ? 'active' : ''}" data-page="${i}">${i}</li>`;
+        htmlContent += pageItem;
+    }
+    pagination.innerHTML = htmlContent;
+}
+
+fetchUsers();

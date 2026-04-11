@@ -62,9 +62,8 @@ i {
 
 /* content style */
 #content #card_list {
-    height: 90%;
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
     gap: 10px;
 }
 
@@ -85,6 +84,28 @@ i {
 
 .card__content {
     height: 70%;
+}
+
+/* pagination style */
+#paging {
+    display: flex;
+    justify-content: center;
+    list-style: none;
+    margin: 20px 0;
+}
+
+.page-item {
+    padding: 5px 15px;
+    margin: 0 5px;
+    background-color: #f0f0f0;
+    border: 1px solid #ccc;
+    cursor: pointer;
+    border-radius: 10px;
+}
+
+.page-item.active {
+    background-color: #007bff;
+    color: white;
 }
 
 /* trạng thái collapse */
