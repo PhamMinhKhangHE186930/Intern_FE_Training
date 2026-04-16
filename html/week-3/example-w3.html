@@ -6,24 +6,30 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Nexcent Refactored</title>
     <link rel="stylesheet" href="../../css/w3.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 </head>
 
-<body>
-    <nav class="navbar flex justify-between items-center flex-wrap py-1 section-padding">
+<body class="">
+    <nav class="navbar flex justify-between items-center py-1 section-padding">
         <div class="navbar__logo flex items-center gap-1">
             <img src="../../assets/Icon.svg" alt="Nexcent logo">
             <h2 class="fs-2">Nexcent</h2>
         </div>
-        <div class="navbar__group flex gap-3 justify-around items-center flex-wrap">
-            <ul class="navbar__links flex justify-around gap-3 flex-wrap fs-1-5">
-                <li><a href="" class="navbar_link">Home</a></li>
-                <li><a href="" class="navbar_link">Features</a></li>
-                <li><a href="" class="navbar_link">Community</a></li>
-                <li><a href="" class="navbar_link">Blog</a></li>
-                <li><a href="" class="navbar_link">Pricing</a></li>
+        <div class="navbar__group flex gap-3 justify-around items-center">
+            <ul class="navbar__links flex justify-around gap-3 fs-1-2">
+                <li><a href="/html/week-3/example-w3.html" class="navbar_link">Home</a></li>
+                <li><a href="/html/week-3/features.html" class="navbar_link">Features</a></li>
+                <li><a href="/html/week-3/features.html" class="navbar_link">Community</a></li>
+                <li><a href="/html/week-3/features.html" class="navbar_link">Blog</a></li>
+                <li><a href="/html/week-3/features.html" class="navbar_link">Pricing</a></li>
+                <button type="button" class="register-btn regis-btn">Register Now</button>
             </ul>
-            <div class="navbar__button">
-                <button type="button" class="register-btn">Register Now</button>
+            <div class="navbar__button flex justify-between">
+                <button type="button" class="register-btn regis-btn">Register Now</button>
+
+                <button type="button" class="navbar__btn--media-phone">
+                    <i class="fa fa-bars fa-2x" aria-hidden="true"></i>
+                </button>
             </div>
         </div>
     </nav>
@@ -41,7 +47,7 @@
                 <p class="hero__text2 text-grey fs-1-5">
                     Where to grow your business as a photographer: site or social media?
                 </p>
-                <button class="register-btn" type="button">Register</button>
+                <button class="register-btn regis-btn" type="button">Register</button>
             </div>
             <div class="hero__fr2">
                 <img src="../../assets/Illustration.svg" alt="" class="w-full">
@@ -96,13 +102,13 @@
         <img src="../../assets/Frame 35.svg" alt="">
         <div class="fact__content">
             <h1 class="fact__header fs-3">The unseen of spending three years at Pixelgrade</h1>
-            <p class="fact__text text-grey fs-1">
+            <p class="fact__text text-grey fs-1-2 py-2">
                 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed sit amet justo ipsum. Sed accumsan quam
                 vitae est varius fringilla. Pellentesque placerat vestibulum lorem sed porta. Nullam mattis tristique
                 iaculis. Nullam pulvinar sit amet risus pretium auctor. Etiam quis massa pulvinar, aliquam quam vitae,
                 tempus sem. Donec elementum pulvinar odio.
             </p>
-            <button type="button" class="register-btn">Learn More</button>
+            <button type="button" class="register-btn learn-btn">Learn More</button>
         </div>
     </div>
 
@@ -116,7 +122,7 @@
             <p class="stat_text">We reached here with our hard work and dedication</p>
         </div>
         <div class="stat__count">
-            <div class="count_r1 flex justify-between flex-wrap">
+            <div class="count_r1 flex justify-around flex-wrap">
                 <div class="count flex items-center gap-1">
                     <img src="../../assets/Count (4).svg" alt="">
                     <div class="count__content">
@@ -132,7 +138,7 @@
                     </div>
                 </div>
             </div>
-            <div class="count_r2 flex justify-between flex-wrap">
+            <div class="count_r2 flex justify-around flex-wrap">
                 <div class="count flex items-center gap-1">
                     <img src="../../assets/Count (2).svg" alt="">
                     <div class="count__content">
@@ -155,7 +161,7 @@
         <img src="../../assets/guide.svg" alt="">
         <div class="guide__content">
             <h1 class="guide__header font-semibold fs-3">How to design your site footer like we did</h1>
-            <p class="guide__text text-grey">
+            <p class="guide__text text-grey fs-1-2 py-2">
                 Donec a eros justo. Fusce egestas tristique ultrices. Nam tempor, augue nec tincidunt molestie, massa
                 nunc varius arcu, at scelerisque elit erat a magna. Donec quis erat at libero ultrices mollis. In hac
                 habitasse platea dictumst. Vivamus vehicula leo dui, at porta nisi facilisis finibus. In euismod augue
@@ -163,7 +169,7 @@
                 quis massa. Praesent felis est, finibus et nisi ac, hendrerit venenatis libero. Donec consectetur
                 faucibus ipsum id gravida.
             </p>
-            <button type="button" class="register-btn">Learn More</button>
+            <button type="button" class="register-btn learn-btn">Learn More</button>
         </div>
     </div>
 
@@ -181,14 +187,14 @@
             </p>
             <p class="author text-green font-semibold fs-1-5">Tim Smith</p>
             <p class="organize text-grey">British Dragon Boat Racing Association</p>
-            <div class="customer flex justify-around flex-wrap items-center mt-2">
+            <div class="customer flex justify-between flex-wrap items-center mt-2">
                 <img src="../../assets/Logo.svg" alt="">
                 <img src="../../assets/Logo (1).svg" alt="">
                 <img src="../../assets/Logo (2).svg" alt="">
                 <img src="../../assets/Logo (3).svg" alt="">
                 <img src="../../assets/Logo (4).svg" alt="">
                 <img src="../../assets/Logo (5).svg" alt="">
-                <button type="button" class="customer-btn font-semibold flex items-center gap-1">Meet all
+                <button type="button" class="customer-btn meet-all-btn font-semibold flex items-center gap-1">Meet all
                     customer</button>
             </div>
         </div>
@@ -203,29 +209,29 @@
         <div class="read-more flex justify-between w-full flex-wrap gap-1 mt-2">
             <div class="read-more__card flex flex-col justify-center items-center w-full">
                 <img src="../../assets/image 18.png" alt="">
-                <div class="card__content flex flex-col items-center text-center">
+                <div class="card__content flex flex-col items-center justify-between text-center">
                     <p class="card__content__text text-grey font-semibold">
                         Creating Streamlined Safeguarding Processes with OneRen
                     </p>
-                    <button type="button" class="customer-btn">Readmore</button>
+                    <button type="button" class="customer-btn read-btn">Readmore</button>
                 </div>
             </div>
             <div class="read-more__card flex flex-col justify-center items-center w-full">
                 <img src="../../assets/image 19.png" alt="">
-                <div class="card__content flex flex-col items-center text-center">
+                <div class="card__content flex flex-col items-center justify-between text-center">
                     <p class="card__content__text text-grey font-semibold">
                         What are your safeguarding responsibilities and how can you manage them?
                     </p>
-                    <button type="button" class="customer-btn">Readmore</button>
+                    <button type="button" class="customer-btn read-btn">Readmore</button>
                 </div>
             </div>
             <div class="read-more__card flex flex-col justify-center items-center w-full">
                 <img src="../../assets/image 20.png" alt="">
-                <div class="card__content flex flex-col items-center text-center">
+                <div class="card__content flex flex-col items-center justify-between text-center">
                     <p class="card__content__text text-grey font-semibold">
                         Revamping the Membership Model with Triathlon Australia
                     </p>
-                    <button type="button" class="customer-btn">Readmore</button>
+                    <button type="button" class="customer-btn read-btn">Readmore</button>
                 </div>
             </div>
         </div>
@@ -233,5 +239,8 @@
 
     <footer>
     </footer>
+
+    <script src="../../js/week-3/example-w3.js"></script>
 </body>
+
 </html>
