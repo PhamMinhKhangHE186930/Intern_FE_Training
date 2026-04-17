@@ -52,6 +52,14 @@ img {
     justify-content: space-around;
 }
 
+.flex-grow-1 {
+    flex-grow: 1;
+}
+
+.flex-1-0 {
+    flex: 1 0;
+}
+
 /* Colors & Backgrounds */
 .text-grey {
     color: #89939e;
@@ -61,12 +69,20 @@ img {
     color: #49ad4c;
 }
 
+.text-white {
+    color: #ffffff;
+}
+
 .bg-green {
     background-color: #49ad4c;
 }
 
 .bg-light-grey {
     background-color: #f5f7fa;
+}
+
+.bg-transparent {
+    background-color: transparent;
 }
 
 /* Typography */
@@ -80,7 +96,10 @@ img {
 
 .fs-1-2 {
     font-size: 1.2rem;
-    margin: 0;
+}
+
+.fs-1-25 {
+    font-size: 1.25rem;
 }
 
 .fs-1-5 {
@@ -89,12 +108,14 @@ img {
 
 .fs-2 {
     font-size: 2rem;
-    margin: 0
+}
+
+.fs-2-5 {
+    font-size: 2.5rem;
 }
 
 .fs-3 {
     font-size: 3rem;
-    margin: 0
 }
 
 .fs-5 {
@@ -104,6 +125,19 @@ img {
 /* Spacing & Sizing */
 .w-full {
     width: 100%;
+}
+
+.m-0 {
+    margin: 0;
+}
+
+.my-0 {
+    margin-top: 0;
+    margin-bottom: 0;
+}
+
+.mt-2 {
+    margin-top: 2rem;
 }
 
 .section-padding {
@@ -162,12 +196,27 @@ img {
     padding-right: 5rem;
 }
 
-.my-0 {
-    margin-top: 0;
-    margin-bottom: 0;
+/* Borders, Radius & Shadows */
+.border-none {
+    border: none;
 }
 
+.radius-5 {
+    border-radius: 5px;
+}
 
+.radius-half {
+    border-radius: 0.5rem;
+}
+
+.shadow-custom {
+    box-shadow: 2px 2px 10px -4px #c4d2e0;
+}
+
+/* Actions */
+.cursor-pointer {
+    cursor: pointer;
+}
 
 /*========== Element Style ===========*/
 /* Navbar */
@@ -175,13 +224,11 @@ img {
     position: sticky;
     top: 0;
     background-color: #ffffff;
-    /* Bắt buộc phải có để không đè chữ */
     z-index: 999;
 }
 
 .navbar__links {
     list-style: none;
-    margin: 0;
     padding: 0;
 }
 
@@ -190,41 +237,18 @@ img {
     color: #343c41;
 }
 
-/* action */
-.cus-pointer {
-    cursor: pointer;
-}
-
 /* Buttons */
 .register-btn {
     padding: 1rem 2rem;
-    font-size: 1.2rem;
-    border: none;
-    background-color: #49ad4c;
-    color: #ffffff;
-    border-radius: 5px;
-    cursor: pointer;
 }
 
 .customer-btn {
     padding: 0.85rem 1.25rem;
-    border: none;
-    background-color: transparent;
-    color: #49ad4c;
-    font-size: 1.5rem;
-    font-weight: 600;
-    border-radius: 5px;
-    cursor: pointer;
 }
 
 .navbar__btn--media-phone {
     display: none;
     padding: 0.5rem 0.75rem;
-    background-color: transparent;
-    border: none;
-    color: #49ad4c;
-    border-radius: 5px;
-    cursor: pointer;
 }
 
 .navbar__links .register-btn {
@@ -238,8 +262,6 @@ img {
 
 .hero__fr2 {
     flex: 1 1 auto;
-    display: flex;
-    justify-content: center;
 }
 
 .hero__text1 {
@@ -259,50 +281,30 @@ img {
 /* Community */
 .community__text h1 {
     width: 65%;
-    margin: 0;
 }
 
 .community__detail {
     max-width: 27%;
     padding: 2rem 2.8rem;
-    border-radius: 0.5rem;
-    box-shadow: 2px 2px 10px -4px #c4d2e0;
 }
 
 /* Fact & Guide & Tesla */
-.fact img {
-    flex: 1 0;
-}
-
 .fact__content {
     flex: 1.3 0;
     padding: 3rem 0;
-}
-
-.tesla>img {
-    flex: 1 0;
 }
 
 .tesla__content {
     flex: 3 0;
 }
 
+.guide__content {
+    flex: 1.3 0;
+}
+
 /* Stats */
-.stat__content {
-    flex-grow: 1;
-}
-
-.stat__header {
-    font-size: 2.5rem;
-    margin: 0;
-}
-
 .stat_text {
     font-size: 1.2rem;
-}
-
-.stat__count {
-    flex-grow: 1;
 }
 
 .count {
@@ -310,24 +312,7 @@ img {
     max-width: 13rem;
 }
 
-.count__number {
-    font-size: 2rem;
-    margin: 0;
-}
-
-.guideline img {
-    flex: 1 0;
-}
-
-.guide__content {
-    flex: 1.3 0;
-}
-
 /* Caring */
-.caring__header {
-    font-size: 2.5rem;
-}
-
 .caring__text {
     max-width: 40rem;
 }
@@ -337,27 +322,13 @@ img {
     margin-bottom: 2rem;
 }
 
-.read-more__card img {
-    width: 100%;
-    height: auto;
-}
-
 .card__content {
-    background-color: #f5f7fa;
-    border-radius: 0.5rem;
     padding: 1rem;
     max-width: 80%;
     min-height: 10rem;
-    box-shadow: 2px 2px 10px -4px #c4d2e0;
     z-index: 10;
     position: relative;
     margin-top: -6rem;
-    flex-grow: 1;
-}
-
-.card__content__text {
-    font-size: 1.25rem;
-    margin: 0;
 }
 
 footer {
@@ -500,6 +471,7 @@ footer {
 
     body.collapsed .navbar__links {
         height: 70vh;
+        overflow: scroll;
     }
 
     .navbar__button>.register-btn {
